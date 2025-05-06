@@ -5,11 +5,14 @@ import App from "./App";
 import store from "./store";
 import { Provider } from "react-redux";
 
+if (process.env.NODE_ENV === "development") {
+  const { makeServer } = require("./mocks/server");
+  makeServer();
+}
+
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );

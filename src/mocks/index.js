@@ -1,26 +1,16 @@
-export let sales;
-export let subscriptions;
+import { createServer } from "miragejs";
+import { sales, subscriptions } from "./data";
 
-if (process.env.NODE_ENV === "development") {
-  /* ONLY FOR DEVELOPMENT! DON'T IMPORT IN PRODUCTION */
-  const Series = require("time-series-data-generator");
+export function makeServer({ environment = "development" } = {}) {
+  if (environment !== "development") return;
 
-  const from = "2020-01-01T16:30:41Z";
-  const until = "2020-05-01T18:30:00Z";
-  const interval = 43200;
-  const keyName = "amount";
+  createServer({
+    routes() {
+      this.namespace = "api";
 
-  const salesSeries = new Series({ from, until, interval, keyName });
-  sales = salesSeries.gaussian({
-    mean: 360,
-    variance: 10,
-    decimalDigits: 0
-  });
-
-  const subscriptionsSeries = new Series({ from, until, interval, keyName });
-  subscriptions = subscriptionsSeries.gaussian({
-    mean: 9,
-    variance: 5,
-    decimalDigits: 0
+      this.get("/sales", () => sales);
+      this.get("/subscriptions", () => subscriptions);
+    }
   });
 }
+
