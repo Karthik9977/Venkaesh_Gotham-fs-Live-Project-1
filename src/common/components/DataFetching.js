@@ -1,29 +1,25 @@
-// src/common/components/DataFetching.js
 
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
-import { useFetch } from '../../hooks/useFetch';
-import Loading from './Laoding';
+import React, { useState, useEffect, useContext } from 'react';
+//import PropTypes from 'prop-types';
+//import { useFetch } from '../../hooks/useFetch';
+import {globalContext} from '../../App';
+//import Loading from './Loading';
 
-const DataFetching = ({ endpoint }) => {
-  const [loading, error, data, ] = useState(endpoint);
+const DataFetching = () => {
+  const context = useContext(globalContext);
 
-  if (loading) return <Loading/>
-  if(error) return <p> Oops! Something went wrong: {error}</p>
+  if (!context) {
+    return <div>Error: Context is not available.</div>
+  }
+
+  const {sales} = context;
 
   return (
-    <ul>
-      {data.map(item => (
-        <li key={item.timestamp}>
-          {item.timestamp} - {item.amount}
-        </li>
-      ))}
-    </ul>
+    <div>
+      <h1>Sales Data:</h1>
+      <pre>{JSON.stringify(sales,null,2)}</pre>
+    </div>
   );
-};
-
-DataFetching.propTypes = {
-  endpoint: PropTypes.string.isRequired,
 };
 
 export default DataFetching;
