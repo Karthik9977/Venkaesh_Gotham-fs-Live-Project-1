@@ -1,0 +1,59 @@
+[33mcommit a4b6c599cdc3502ba905ac2c7ca902a514e70b1f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Vijay <vijay@example.com>
+Date:   Wed May 7 11:03:12 2025 +0530
+
+    GlobalContext
+
+[33mcommit bb55cd74eb163254f23a29cac5f4cb5b3d7007b8[m
+Author: Vijay <vijay@example.com>
+Date:   Tue May 6 11:10:17 2025 +0530
+
+    merge
+
+[33mcommit 425170600e2d6b27bbf16211580075aa95b4e5f8[m
+Author: valentinogagliardi <valentino@valentinog.com>
+Date:   Wed Dec 30 16:01:22 2020 +0100
+
+    Use npm ci
+
+[33mcommit 68e61c6b212a287a213565e82b5b764588077de3[m
+Author: valentinogagliardi <valentino@valentinog.com>
+Date:   Thu Jun 25 18:09:48 2020 +0200
+
+    Import time series only in development
+
+[33mcommit 65b8c90db2cda3cefffa3298bafdbfc98e55d6a8[m
+Author: valentinogagliardi <valentino@valentinog.com>
+Date:   Tue Jun 23 15:32:48 2020 +0200
+
+    update folder structure
+
+[33mcommit 593224ec9e8fd297da2293aa97b6a532d107222b[m
+Author: valentinogagliardi <valentino@valentinog.com>
+Date:   Thu Jun 18 17:10:10 2020 +0200
+
+    Chart, styles, and connection with Redux
+
+[33mcommit 5d7949b265e62048da3ac04348d9bf275636834f[m
+Author: valentinogagliardi <valentino@valentinog.com>
+Date:   Wed Jun 17 11:41:33 2020 +0200
+
+    Add miragejs and mock data
+
+[33mcommit 8e493d9f16a8ef173c3684d7f867f6f55e735acf[m
+Author: valentinogagliardi <valentino@valentinog.com>
+Date:   Wed Jun 17 10:31:24 2020 +0200
+
+    update BASE_URL
+
+[33mcommit 62d2bde2244ee421895a63104b1a274dbca2b071[m
+Author: valentinogagliardi <valentino@valentinog.com>
+Date:   Tue Jun 16 14:40:06 2020 +0200
+
+    upload to Github
+
+[33mcommit 3d3eaf7fe4591a328c1d1d19086e6a28784bdb3b[m
+Author: valentinogagliardi <valentino@valentinog.com>
+Date:   Tue Jun 16 10:23:31 2020 +0200
+
+    Initialize project using Create React App

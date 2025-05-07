@@ -13,7 +13,7 @@ const SummaryContainer = () => {
         <p>CellFast Sales</p>
         <p>$ {salesTotal}</p>
       </div>
-      <div className="card ng-blue">
+      <div className="card bg-blue">
         <p>CellNow subscriptions</p>
         <p>$ {subscriptionsTotal}</p>
       </div>
